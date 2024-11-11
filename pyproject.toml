@@ -1,0 +1,42 @@
+[project]
+name = "pymurmur"
+version = "0.1.0"
+requires-python = ">=3.7"
+authors = [
+    { name = "weak_ptr", email = "weak_ptr@outlook.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+description = "Python binding for murmur hash algorithms"
+
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[[tool.setuptools.ext-modules]]
+name = "pymurmur"
+py-limited-api = true
+sources = [
+    "src/MurmurHash1.c",
+    "src/MurmurHash2.cpp",
+    "src/MurmurHash3.cpp",
+    "src/pymurmur.c",
+]
+depends = [
+    "src/MurmurHash1.h",
+    "src/MurmurHash2.h",
+    "src/MurmurHash3.h",
+]

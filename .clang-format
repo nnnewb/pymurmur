@@ -1,0 +1,11 @@
+# Generated from CLion C/C++ Code Style settings
+---
+Language: Cpp
+BasedOnStyle: LLVM
+ColumnLimit: 120
+NamespaceIndentation: All
+BreakBeforeBraces: Attach
+BreakTemplateDeclarations: Yes
+AllowShortFunctionsOnASingleLine: Empty
+IndentWidth: 4
+TabWidth: 4
